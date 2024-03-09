@@ -1,0 +1,24 @@
+.dino-container img, .dino-container-reverse img {
+    width: 10rem;
+}
+
+.dino-container {
+    border: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    max-width: 30rem;
+    background-color: rgb(161, 162, 162);
+
+}
+
+.dino-container-reverse {
+    flex-direction: row-reverse;
+    border: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    max-width: 30rem;
+    background-color: rgb(161, 162, 162);
+}
+

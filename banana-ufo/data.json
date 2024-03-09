@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "name": "Justin Bieber",
+            "albums": 7,
+            "tophit": "Baby",
+            "photo": "https://www.thelist.com/img/gallery/the-stunning-transformation-of-justin-bieber/intro-1630424593.webp"
+
+        },
+        {
+            "name": "Lady Gaga",
+            "albums": 8,
+            "tophit": "Pokerface",
+            "photo": "https://people.com/thmb/0AGnafx90VVyheLv3FWKXjN0xrM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x799:1001x801)/lady-gaga-2019-2000-ecde0348cd054105b8eeca7abdd2e8cb.jpg"
+            
+        },
+        {
+            "name": "Thomas Stenström",
+            "albums": 4,
+            "tophit": "Slå mig hårt i ansiktet",
+            "photo": "https://lastfm.freetls.fastly.net/i/u/ar0/fe223a9b6d48d7108d7cc33b463bd313.jpg"
+        }
+       
+    ]
+}

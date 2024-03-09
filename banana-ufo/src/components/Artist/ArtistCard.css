@@ -1,0 +1,21 @@
+.artist-card {
+    border: solid 2px black;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgb(193, 202, 202);
+    display: flex;
+    justify-content: space-between;
+}
+
+.artist-rubrik {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.artist-card img {
+    width: 8rem;
+    border: solid 4px rgb(139, 30, 170);
+    
+
+}
+

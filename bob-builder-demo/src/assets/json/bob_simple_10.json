@@ -1,0 +1,93 @@
+[
+    {
+      "firstname": "Bob",
+      "lastname": "Builder",
+      "pant_color": "blue",
+      "favorite_food": "spaghetti",
+      "favorite_tool": "hammer",
+      "pet": "Sparky the Dog",
+      "hobby": "Building sandcastles"
+    },
+    {
+      "firstname": "Wendy",
+      "lastname": "Wheels",
+      "pant_color": "green",
+      "favorite_food": "pizza",
+      "favorite_tool": "wrench",
+      "pet": "Fluffy the Cat",
+      "hobby": "Gardening"
+    },
+    {
+      "firstname": "Molly",
+      "lastname": "Measure",
+      "pant_color": "pink",
+      "favorite_food": "cupcakes",
+      "favorite_tool": "tape measure",
+      "pet": "Whiskers the Bunny",
+      "hobby": "Painting"
+    },
+    {
+      "firstname": "Jack",
+      "lastname": "Hammer",
+      "pant_color": "yellow",
+      "favorite_food": "burgers",
+      "favorite_tool": "jackhammer",
+      "pet": "Polly the Parrot",
+      "hobby": "Playing music"
+    },
+    {
+      "firstname": "Sam",
+      "lastname": "Sawyer",
+      "pant_color": "orange",
+      "favorite_food": "sandwiches",
+      "favorite_tool": "handsaw",
+      "pet": "Nibbles the Hamster",
+      "hobby": "Reading"
+    },
+    {
+      "firstname": "Sally",
+      "lastname": "Scaffold",
+      "pant_color": "purple",
+      "favorite_food": "grapes",
+      "favorite_tool": "scaffold",
+      "pet": "Bubbles the Turtle",
+      "hobby": "Singing"
+    },
+    {
+      "firstname": "Tim",
+      "lastname": "Trowel",
+      "pant_color": "brown",
+      "favorite_food": "steak",
+      "favorite_tool": "trowel",
+      "pet": "Scooter the Squirrel",
+      "hobby": "Cooking"
+    },
+    {
+      "firstname": "Danny",
+      "lastname": "Drill",
+      "pant_color": "red",
+      "favorite_food": "hotdogs",
+      "favorite_tool": "drill",
+      "pet": "Speedy the Mouse",
+      "hobby": "Fishing"
+    },
+    {
+      "firstname": "Lucy",
+      "lastname": "Ladder",
+      "pant_color": "teal",
+      "favorite_food": "ice cream",
+      "favorite_tool": "ladder",
+      "pet": "Splash the Goldfish",
+      "hobby": "Playing sports"
+    },
+    {
+      "firstname": "Larry",
+      "lastname": "Leveler",
+      "pant_color": "gray",
+      "favorite_food": "cookies",
+      "favorite_tool": "level",
+      "pet": "Buddy the Hamster",
+      "hobby": "Dancing"
+    }
+  ]
+  

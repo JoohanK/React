@@ -1,0 +1,12 @@
+h1 {
+	padding: 1.5rem;
+	width: 50%;
+	max-width: 40rem;
+	border: 5px solid var(--aqua);
+	border-radius: 2rem;
+	box-shadow: 0 0 0 3px var(--rose-pink);
+	background-color: var(--bole);
+	text-align: center;
+	color: var(--vanilla);
+}
+

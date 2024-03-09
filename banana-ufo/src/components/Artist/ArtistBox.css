@@ -1,0 +1,15 @@
+.artist-container {
+    width: 50%;
+    max-width: 40rem;
+    background-color: rgb(79, 193, 193);
+    border: solid 10px pink;
+    padding: 1rem;
+    justify-content: center;
+    
+}
+
+.artist-container h2 {
+    display: flex;
+    justify-content: center;
+    color: rgb(159, 20, 150);
+}
