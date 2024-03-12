@@ -50,10 +50,13 @@ const JediDropDown = () => {
             <p>Eye color: {selectedJedi.eye_color}</p>
             <p>Starships:</p>
             <ul>
-              {selectedJedi.starships &&
+              {selectedJedi.starships ? (
                 selectedJedi.starships.map((starship, index) => (
                   <li key={index}>{starship}</li>
-                ))}
+                ))
+              ) : (
+                <li>None</li>
+              )}
             </ul>
           </>
         )}
