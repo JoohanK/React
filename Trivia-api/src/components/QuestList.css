@@ -1,0 +1,9 @@
+.cat-dif-box {
+  border: solid 1px black;
+}
+
+.que-ans-box {
+  border: solid 1px black;
+  margin-top: 1rem;
+  padding: 1rem;
+}
