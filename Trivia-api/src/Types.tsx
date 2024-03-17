@@ -3,8 +3,10 @@ export type Quest = {
   difficulty: string;
   category: string;
   question: string;
-  correct_answer: number;
+  correct_answer: string;
   incorrect_answers: string[];
 };
 
-export default Quest;
+export type Props = {
+  questList: Quest[];
+};
