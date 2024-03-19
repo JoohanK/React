@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { v4 as uuid } from "uuid";
 
-type Student = {
+export type Student = {
   id: string;
   name: string;
   age: number;

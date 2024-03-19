@@ -1,8 +1,9 @@
+import { GlobalStateContext } from "./GlobalContext";
 import { TeacherContext } from "./TeacherContext";
 import { useContext } from "react";
 
 const TeacherList = () => {
-  const teachers = useContext(TeacherContext);
+  const teachers = useContext(GlobalStateContext).teachers;
 
   return (
     <div>

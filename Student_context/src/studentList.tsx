@@ -1,10 +1,11 @@
 // komponent för att visa alla studenter (namn)
 
+import { GlobalStateContext } from "./GlobalContext";
 import { StudentContext } from "./studentContext";
 import { useContext } from "react";
 
 const StudentList = () => {
-  const students = useContext(StudentContext);
+  const students = useContext(GlobalStateContext).students;
 
   return (
     <div>
