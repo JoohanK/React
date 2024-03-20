@@ -30,6 +30,7 @@ type MC2wheel = {
   wheels: number;
   year: number;
   color: string;
+  offroad: boolean;
 };
 
 type MC3wheel = {
