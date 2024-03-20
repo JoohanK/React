@@ -6,6 +6,8 @@ import { initialStudents } from "./studentContext";
 import { initialTeachers } from "./TeacherContext";
 import SearchTeacher from "./SearchTeacher";
 import FilterTeacher from "./FilterTeacher";
+import { VehicleList } from "./FordonsLista";
+import VehicleComponent from "./Types";
 
 import "./App.css";
 
@@ -22,6 +24,7 @@ function App() {
         <TeacherList />
         <SearchTeacher />
         <FilterTeacher />
+        <VehicleComponent vehicles={VehicleList} />
       </GlobalStateContext.Provider>
     </>
   );
