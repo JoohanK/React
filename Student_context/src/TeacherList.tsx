@@ -1,5 +1,5 @@
 import { GlobalStateContext } from "./GlobalContext";
-import { TeacherContext } from "./TeacherContext";
+import { Teacher } from "./TeacherContext";
 import { useContext } from "react";
 
 const TeacherList = () => {
@@ -8,11 +8,10 @@ const TeacherList = () => {
   return (
     <div>
       <ul>
-        {teachers.map((t) => {
+        {teachers.map((t: Teacher) => {
           return (
             <li key={t.id}>
-              Name: {t.name}, Age: {t.age}, <br />
-              Subject: {t.subject}
+              Name: {t.name}, Age: {t.age}
             </li>
           );
         })}

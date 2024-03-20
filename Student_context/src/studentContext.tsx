@@ -23,6 +23,21 @@ export const initialStudents: Student[] = [
     name: "Kim",
     age: 26,
   },
+  {
+    id: uuid(),
+    name: "Lena",
+    age: 17,
+  },
+  {
+    id: uuid(),
+    name: "Leif",
+    age: 15,
+  },
+  {
+    id: uuid(),
+    name: "Greger",
+    age: 26,
+  },
 ];
 
 export const StudentContext = createContext([] as Student[]);

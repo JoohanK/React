@@ -4,6 +4,8 @@ import TeacherList from "./TeacherList";
 import { GlobalStateContext } from "./GlobalContext";
 import { initialStudents } from "./studentContext";
 import { initialTeachers } from "./TeacherContext";
+import SearchTeacher from "./SearchTeacher";
+import FilterTeacher from "./FilterTeacher";
 
 import "./App.css";
 
@@ -18,6 +20,8 @@ function App() {
         <StudentList />
         <h2>Teacher Context</h2>
         <TeacherList />
+        <SearchTeacher />
+        <FilterTeacher />
       </GlobalStateContext.Provider>
     </>
   );
