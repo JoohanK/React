@@ -50,6 +50,13 @@ const Monster: React.FC = () => {
     };
     dispatch(action);
   };
+  const handleAddTentacle = (id: string) => {
+    const action: Action = {
+      type: "ADD_TENTACLE",
+      payload: id,
+    };
+    dispatch(action);
+  };
 
   return (
     <div>
@@ -59,6 +66,9 @@ const Monster: React.FC = () => {
             Name: {m.name}, Tentacles: {m.tentacles}, Eyes: {m.eyes}, Color:{" "}
             {m.color}, Horn: {m.horn ? "Yes" : "No"}
             <button onClick={() => handleDelete(m.id)}>Delete</button>
+            <button onClick={() => handleAddTentacle(m.id)}>
+              Add Tentacle
+            </button>
           </li>
         ))}
       </ul>

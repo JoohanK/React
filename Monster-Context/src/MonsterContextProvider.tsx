@@ -53,7 +53,8 @@ export const MonsterContext = createContext<{
 
 export type Action =
   | { type: "ADD"; payload: Monster }
-  | { type: "REMOVE"; payload: Monster["id"] };
+  | { type: "REMOVE"; payload: Monster["id"] }
+  | { type: "ADD_TENTACLE"; payload: Monster["id"] };
 
 const reducer = (state: MonsterState, action: Action) => {
   switch (action.type) {
@@ -64,6 +65,12 @@ const reducer = (state: MonsterState, action: Action) => {
     case "REMOVE":
       return {
         monsters: state.monsters.filter((m) => m.id !== action.payload),
+      };
+    case "ADD_TENTACLE":
+      return {
+        monsters: state.monsters.map((m) =>
+          m.id === action.payload ? { ...m, tentacles: m.tentacles + 1 } : m
+        ),
       };
 
     default:
