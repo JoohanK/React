@@ -1,27 +1,44 @@
 import { createContext, useReducer } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 type Monster = {
+  id: string;
   name: string;
   eyes: number;
   tentacles: number;
+  color: string;
+  horn: boolean;
 };
 
-// GlobalState
-type MonsterState = {
+export type MonsterState = {
   monsters: Monster[];
 };
 
 const initialMonsterState: MonsterState = {
   monsters: [
     {
+      id: uuidv4(),
       name: "Gugge",
       eyes: 3,
       tentacles: 12,
+      color: "red",
+      horn: true,
     },
     {
+      id: uuidv4(),
       name: "Lisa",
       eyes: 26,
       tentacles: 9,
+      color: "blue",
+      horn: false,
+    },
+    {
+      id: uuidv4(),
+      name: "Kalle",
+      eyes: 1,
+      tentacles: 1,
+      color: "green",
+      horn: true,
     },
   ],
 };
@@ -34,9 +51,9 @@ export const MonsterContext = createContext<{
   dispatch: () => null,
 });
 
-type Action =
+export type Action =
   | { type: "ADD"; payload: Monster }
-  | { type: "REMOVE"; payload: string };
+  | { type: "REMOVE"; payload: Monster["id"] };
 
 const reducer = (state: MonsterState, action: Action) => {
   switch (action.type) {
@@ -45,7 +62,10 @@ const reducer = (state: MonsterState, action: Action) => {
         monsters: [...state.monsters, action.payload],
       };
     case "REMOVE":
-      return state; // detta ska ändras! Remove fungerar inte
+      return {
+        monsters: state.monsters.filter((m) => m.id !== action.payload),
+      };
+
     default:
       return state;
   }
@@ -55,8 +75,6 @@ type MonsterContextProviderProp = {
   children: React.ReactNode;
 };
 function MonsterContextProvider({ children }: MonsterContextProviderProp) {
-  // här kan vi använda useReducer eller useState
-
   const [state, dispatch] = useReducer(reducer, initialMonsterState);
 
   return (

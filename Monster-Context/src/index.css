@@ -23,7 +23,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 1rem;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -45,6 +45,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 0.5rem;
 }
 button:hover {
   border-color: #646cff;
@@ -65,4 +66,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid #646cff;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  color: inherit;
+  transition: border-color 0.25s;
+  margin: 0.2rem;
 }

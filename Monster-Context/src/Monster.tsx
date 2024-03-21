@@ -1,33 +1,103 @@
-import { useContext, useState } from "react";
-import { MonsterContext } from "./MonsterContextProvider";
+import React, { ChangeEvent, useContext, useState } from "react";
+import { MonsterContext, Action } from "./MonsterContextProvider";
+import { v4 as uuidv4 } from "uuid";
 
-const Monster = () => {
+const Monster: React.FC = () => {
   const { state, dispatch } = useContext(MonsterContext);
-  const [name, setName] = useState("");
+  const [newMonster, setNewMonster] = useState({
+    name: "",
+    eyes: 0,
+    tentacles: 0,
+    color: "",
+    horn: false,
+  });
 
-  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-    setName(e.target.value);
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
+    const newValue =
+      type === "checkbox" ? (e.target as HTMLInputElement).checked : value;
+    setNewMonster((prevMonster) => ({
+      ...prevMonster,
+      [name]: newValue,
+    }));
   };
 
   const handleClick = () => {
-    dispatch({
+    const action: Action = {
       type: "ADD",
-      payload: { name: name, eyes: 0, tentacles: 0 },
+      payload: {
+        ...newMonster,
+        id: uuidv4(),
+      },
+    };
+    dispatch(action);
+
+    setNewMonster({
+      name: "",
+      eyes: 0,
+      tentacles: 0,
+      color: "",
+      horn: false,
     });
+  };
+
+  const handleDelete = (id: string) => {
+    const action: Action = {
+      type: "REMOVE",
+      payload: id,
+    };
+    dispatch(action);
   };
 
   return (
     <div>
       <ul>
-        {state.monsters.map((m) => {
-          return (
-            <li>
-              Name: {m.name}, Tentacles: {m.tentacles}
-            </li>
-          );
-        })}
+        {state.monsters.map((m) => (
+          <li key={m.id}>
+            Name: {m.name}, Tentacles: {m.tentacles}, Eyes: {m.eyes}, Color:{" "}
+            {m.color}, Horn: {m.horn ? "Yes" : "No"}
+            <button onClick={() => handleDelete(m.id)}>Delete</button>
+          </li>
+        ))}
       </ul>
-      <input type="text" onChange={handleChange} />
+      <input
+        type="text"
+        name="name"
+        value={newMonster.name}
+        onChange={handleChange}
+        placeholder="Name"
+      />
+      <input
+        type="number"
+        name="eyes"
+        value={newMonster.eyes}
+        onChange={handleChange}
+        placeholder="Eyes"
+      />
+      <input
+        type="number"
+        name="tentacles"
+        value={newMonster.tentacles}
+        onChange={handleChange}
+        placeholder="Tentacles"
+      />
+      <input
+        type="text"
+        name="color"
+        value={newMonster.color}
+        onChange={handleChange}
+        placeholder="Color"
+      />
+      <input
+        type="checkbox"
+        name="horn"
+        checked={newMonster.horn}
+        onChange={handleChange}
+      />
+      <label htmlFor="horn">Horns</label>
+      <br />
       <button onClick={handleClick}>Add monster</button>
     </div>
   );
