@@ -17,7 +17,11 @@ const Monster: React.FC = () => {
   ) => {
     const { name, value, type } = e.target;
     const newValue =
-      type === "checkbox" ? (e.target as HTMLInputElement).checked : value;
+      type === "checkbox"
+        ? (e.target as HTMLInputElement).checked
+        : type === "number"
+        ? parseInt(value, 10)
+        : value;
     setNewMonster((prevMonster) => ({
       ...prevMonster,
       [name]: newValue,
@@ -58,6 +62,14 @@ const Monster: React.FC = () => {
     dispatch(action);
   };
 
+  const handleToggleHorn = (id: string, currentHornState: boolean) => {
+    const action: Action = {
+      type: "TOGGLE_HORN",
+      payload: { id, currentHornState },
+    };
+    dispatch(action);
+  };
+
   return (
     <div>
       <ul>
@@ -68,6 +80,9 @@ const Monster: React.FC = () => {
             <button onClick={() => handleDelete(m.id)}>Delete</button>
             <button onClick={() => handleAddTentacle(m.id)}>
               Add Tentacle
+            </button>
+            <button onClick={() => handleToggleHorn(m.id, m.horn)}>
+              {m.horn ? "Remove Horns" : "Add Horns"}
             </button>
           </li>
         ))}
