@@ -1,0 +1,13 @@
+.radio-button {
+  :hover {
+    background-color: #c21212;
+    cursor: pointer;
+  }
+  :active {
+    background-color: #24b529;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: #102b6f;
+  }
+}
