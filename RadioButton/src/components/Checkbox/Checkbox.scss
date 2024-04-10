@@ -1,0 +1,10 @@
+.checkbox {
+  width: 5rem;
+  height: 3rem;
+  border: solid 3px #000;
+  margin-top: 2rem;
+
+  &.checked {
+    background-color: #102b6f;
+  }
+}
