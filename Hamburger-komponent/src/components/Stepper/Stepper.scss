@@ -1,0 +1,96 @@
+@import "../../Sass/Variables/stepperColors";
+@import "../../Sass/Variables/mixins";
+
+.stepper-container {
+  @include flexDirection(column);
+  height: 100vh;
+
+  .container {
+    border: 20px solid $color-blue;
+    padding: 40px;
+    @include flexDirection(column);
+  }
+
+  .stepper {
+    padding: 30px;
+    @include flexDirection(row);
+    margin-bottom: 40px;
+
+    .content {
+      padding: 10px;
+      color: $color-blue;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+
+    .all {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      border: 2px solid $color-gray-light;
+    }
+
+    .start-stepper {
+      background-color: $color-green;
+    }
+    .midle-stepper {
+      background-color: $color-yellow;
+    }
+    .finish-stepper {
+      background-color: $color-red;
+    }
+
+    .active {
+      animation: borderAnimation 1s;
+    }
+    .not-active {
+      background-color: $color-gray-light;
+    }
+  }
+
+  .btn {
+    padding: 10px;
+    color: $color-white;
+    margin-bottom: 50px;
+    background-color: $color-blue;
+    font-size: 20px;
+    border: 2px solid $color-plum;
+  }
+  .btn:hover {
+    cursor: pointer;
+    background-color: $color-plum;
+    border: 2px solid $color-blue;
+    color: $color-blue;
+    // animation: namn 3s;
+  }
+}
+
+@keyframes borderAnimation {
+  100% {
+    border-width: 2px;
+  }
+  75% {
+    border-width: 4px;
+  }
+  50% {
+    border-width: 6px;
+  }
+  25% {
+    border-width: 8px;
+  }
+  0% {
+    border-width: 10px;
+  }
+}
+
+@keyframes namn {
+  0% {
+    padding: 0;
+  }
+  50% {
+    padding: 20%;
+  }
+}
